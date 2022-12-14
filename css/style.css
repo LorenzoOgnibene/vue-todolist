@@ -1,11 +1,9 @@
+
 #app{
     background-color: cornflowerblue;
+    height: 100vh;
 }
 
-
-.list-wrapper{
-    height: 70vh;
-}
 
 span{
     cursor: pointer;
