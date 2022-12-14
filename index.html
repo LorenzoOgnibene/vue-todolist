@@ -26,8 +26,8 @@
             
             <div class="list-wrapper container-fluid d-flex justify-content-center">
                 <ul class="list-group w-50">
-                    <li v-for="(element, indexOf) in toDoList" class="list-group-item d-flex justify-content-between py-4" :class="(element.done == true) ? 'text-decoration-line-through' : '' ">
-                        {{ element.name }}
+                    <li v-for="(element, indexOf) in toDoList" class="list-group-item d-flex justify-content-between py-4" >
+                        <p :class="(element.done == true) ? 'text-decoration-line-through' : '' " @click="isDone(indexOf)"> {{ element.name.charAt(0).toUpperCase() + element.name.slice(1)}}</p>
                         <span class="text-decoration-none" @click="removeItem(indexOf)">&#9932;</span>
                     </li>
                 </ul>

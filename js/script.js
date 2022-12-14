@@ -43,6 +43,14 @@ createApp({
 
         removeItem(index){
             this.toDoList.splice(index, 1);
+        },
+
+        isDone(index){
+            if(this.toDoList[index].done === true){
+                this.toDoList[index].done = false;
+            }else{
+                this.toDoList[index].done = true;
+            }
         }
     }
 
