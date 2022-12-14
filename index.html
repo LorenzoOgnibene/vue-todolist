@@ -21,7 +21,10 @@
         <main>
             <div class="list-wrapper container d-flex justify-content-center align-items-center">
                 <ul class="list-group">
-                    <li v-for="element in toDoList" class="list-group-item" :class="(element.done == true) ? 'text-decoration-line-through' : '' ">{{ element.name }}</li>
+                    <li v-for="(element, indexOf) in toDoList" class="list-group-item d-flex justify-content-between" :class="(element.done == true) ? 'text-decoration-line-through' : '' ">
+                        {{ element.name }}
+                        <span class="text-decoration-none" @click="removeItem(indexOf)">&#9932;</span>
+                    </li>
                 </ul>
             </div>
         </main>

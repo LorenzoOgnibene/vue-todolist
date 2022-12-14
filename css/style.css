@@ -6,3 +6,7 @@
 .list-wrapper{
     height: 70vh;
 }
+
+span{
+    cursor: pointer;
+}
