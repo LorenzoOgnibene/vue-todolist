@@ -46,11 +46,12 @@ createApp({
         },
 
         isDone(index){
-            if(this.toDoList[index].done === true){
-                this.toDoList[index].done = false;
-            }else{
-                this.toDoList[index].done = true;
-            }
+            this.toDoList[index].done =  !this.toDoList[index].done
+            // if(this.toDoList[index].done === true){
+            //     this.toDoList[index].done = false;
+            // }else{
+            //     this.toDoList[index].done = true;
+            // }
         }
     }
 
